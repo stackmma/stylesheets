@@ -1,0 +1,287 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9631,        277]
+NotebookOptionsPosition[      7700,        226]
+NotebookOutlinePosition[      8074,        242]
+CellTagsIndexPosition[      8031,        239]
+WindowFrame->Generic*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> FrontEnd`FileName[{"Creative"}, 
+  "PastelColor.nb", CharacterEncoding -> "UTF-8"]]],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{{3.558298994863233*^9, 3.558298996678213*^9}}],
+
+Cell["\<\
+Author: http://mathematica.stackexchange.com/users/5/\
+\>", "Text",
+ CellChangeTimes->{{3.558299035638905*^9, 3.558299154522953*^9}}],
+
+Cell["\<\
+This is my custom stylesheet. It is still very much a work in progress and \
+there are several rough edges. I\[CloseCurlyQuote]ll upload newer versions \
+when I improve them, but I don\[CloseCurlyQuote]t have any schedule for it. \
+Absolutely no guarantees \[LongDash] use it at your own risk.\
+\>", "Text",
+ CellChangeTimes->{3.558299156492058*^9}],
+
+Cell["\<\
+I use the Inconsolata-dz font for monospaced text (code) and the Optima font \
+for everything else. It might give errors or use default fonts if these are \
+missing.\
+\>", "Text",
+ CellChangeTimes->{{3.5582991771880198`*^9, 3.558299224097354*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Solarized color palette", "Section",
+ CellChangeTimes->{{3.546641219709587*^9, 3.546641233132161*^9}}],
+
+Cell[TextData[{
+ "Named colors and variables cannot be used in a stylesheet (AFAIK). This \
+section contains the RGB colors for the Solarized palette for easy \
+copy-pasting. See http://ethanschoonover.com/solarized for more details\n\n",
+ StyleBox["Background Tones (dark):",
+  FontWeight->"Bold"],
+ StyleBox["\n",
+  FontWeight->"Bold"],
+ "base03\t\tRGBColor[0.,0.168627,0.211765]\nbase02\t\t\
+RGBColor[0.027451,0.211765,0.258824]\n\n",
+ StyleBox["Content Tones:",
+  FontWeight->"Bold"],
+ "\nbase01\t\tRGBColor[0.345098,0.431373,0.458824]\nbase00\t\t\
+RGBColor[0.396078,0.482353,0.513725]\nbase0\t\t\
+RGBColor[0.513725,0.580392,0.588235]\nbase1\t\t\
+RGBColor[0.576471,0.631373,0.631373]\n\n",
+ StyleBox["Background Tones (light):",
+  FontWeight->"Bold"],
+ "\nbase2\t\tRGBColor[0.933333,0.909804,0.835294]\nbase3\t\t\
+RGBColor[0.992157,0.964706,0.890196]\n\n",
+ StyleBox["Accent Colors:",
+  FontWeight->"Bold"],
+ "\nyellow\t\tRGBColor[0.709804,0.537255,0.]\norange\t\t\
+RGBColor[0.796078,0.294118,0.0862745]\nred\t\t\
+RGBColor[0.862745,0.196078,0.184314]\nmagenta\t\
+RGBColor[0.827451,0.211765,0.509804]\nviolet\t\t\
+RGBColor[0.423529,0.443137,0.768627]\nblue\t\t\
+RGBColor[0.14902,0.545098,0.823529]\ncyan\t\t\
+RGBColor[0.164706,0.631373,0.596078]\ngreen\t\tRGBColor[0.521569,0.6,0.]\n\n\n"
+}], "Text",
+ CellChangeTimes->{{3.546641276351449*^9, 3.546641332252922*^9}, {
+  3.546641436258654*^9, 3.5466414402811127`*^9}, {3.546641513004406*^9, 
+  3.546641561746664*^9}, {3.5466416372516003`*^9, 3.5466416388971643`*^9}, {
+  3.546641676146586*^9, 3.546641761982574*^9}, {3.5466417989606047`*^9, 
+  3.546642041057782*^9}, {3.546642792805011*^9, 3.546642797209147*^9}, {
+  3.546649959233301*^9, 3.546650156180094*^9}, {3.546650733494541*^9, 
+  3.5466508011434727`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Environment", "Section",
+ CellChangeTimes->{{3.547231472651531*^9, 3.547231485121068*^9}}],
+
+Cell[StyleData[All, "Working"],
+ DockedCells->{}],
+
+Cell[StyleData[All, "Printout"],
+ DockedCells->{},
+ ShowSyntaxStyles->True,
+ Background->GrayLevel[1]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Input/Output and StandardForm", "Section",
+ CellChangeTimes->{{3.547231193505116*^9, 3.54723119802892*^9}, {
+   3.5472314220833273`*^9, 3.5472314239853687`*^9}, 3.547231483081115*^9}],
+
+Cell[StyleData["StandardForm"],
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{3.545825155715281*^9},
+ AutoStyleOptions->{
+ "CommentStyle"->{
+  FontColor -> RGBColor[0.576471, 0.631373, 0.631373], ShowAutoStyles -> 
+   False, ShowSyntaxStyles -> False, AutoNumberFormatting -> False},
+ "FunctionLocalVariableStyle"->{FontColor -> RGBColor[0.709804, 0.537255, 0.]},
+ "LocalScopeConflictStyle"->{
+  FontColor -> RGBColor[0.423529, 0.443137, 0.768627]},
+ "LocalVariableStyle"->{FontColor -> RGBColor[0.164706, 0.631373, 0.596078]},
+ "PatternVariableStyle"->{
+  FontColor -> RGBColor[0.521569, 0.6, 0.], FontSlant -> Italic},
+ "StringStyle"->{
+  FontColor -> RGBColor[0.827451, 0.211765, 0.509804], ShowAutoStyles -> 
+   False, ShowSyntaxStyles -> False, AutoNumberFormatting -> False},
+ "SymbolShadowingStyle"->{
+  FontColor -> RGBColor[0.796078, 0.294118, 0.0862745]},
+ "SyntaxErrorStyle"->{FontColor -> RGBColor[0.862745, 0.196078, 0.184314]},
+ "UndefinedSymbolStyle"->{FontColor -> RGBColor[0.14902, 0.545098, 0.823529]}},
+ FontFamily->"Inconsolata-dz",
+ FontSize->12,
+ FontWeight->"Plain",
+ FontSlant->"Plain"],
+
+Cell[StyleData["Input"],
+ CellFrame->1,
+ CellMargins->{{65, 0}, {0, 5}},
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellFrameColor->RGBColor[0.933333, 0.909804, 0.835294],
+ AutoIndent->False,
+ CellChangeTimes->{3.545825155715643*^9},
+ AutoSpacing->True,
+ FontWeight->"Plain",
+ FontColor->RGBColor[0.027451, 0.211765, 0.258824],
+ Background->RGBColor[0.992157, 0.964706, 0.890196]],
+
+Cell[CellGroupData[{
+
+Cell[StyleData["Output"],
+ CellFrame->1,
+ CellMargins->{{65, 0}, {5, -1}},
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellFrameColor->RGBColor[0.933333, 0.909804, 0.835294],
+ CellChangeTimes->{3.545825155716502*^9},
+ Background->GrayLevel[1]],
+
+Cell[StyleData["Input", "Printout", StyleDefinitions -> "None"],
+ CellMargins->{{39, 10}, {0, 7}},
+ CellFrameLabelMargins->0,
+ LinebreakAdjustments->{0.85, 2, 10, 1, 1},
+ Background->RGBColor[0.992157, 0.964706, 0.890196]],
+
+Cell[StyleData["Output", "Printout", StyleDefinitions -> None],
+ CellMargins->{{39, 10}, {7, 0}},
+ CellFrameLabelMargins->0,
+ Background->GrayLevel[1]]
+}, Open  ]],
+
+Cell[StyleData["Code"],
+ PageWidth->WindowWidth,
+ CellFrame->1,
+ CellMargins->{{65, 0}, {0, 5}},
+ CellFrameColor->RGBColor[0.622222, 0.606536, 0.556863],
+ FontWeight->"Plain",
+ Background->RGBColor[0.992157, 0.964706, 0.890196]],
+
+Cell[StyleData["PrintUsage"],
+ Editable->False,
+ PageWidth->WindowWidth,
+ CellFrame->{{0, 0}, {0, 2}},
+ CellFrameColor->RGBColor[0.14902, 0.545098, 0.823529],
+ ContextMenu->FEPrivate`FrontEndResource["ContextMenus", "Output"],
+ Background->RGBColor[0.887937, 0.940095, 0.976761]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Titles, sections and text", "Section",
+ CellChangeTimes->{{3.5472314281356163`*^9, 3.547231435673066*^9}, 
+   3.547231487937338*^9, {3.547232227015649*^9, 3.54723223069147*^9}}],
+
+Cell[StyleData["Title"],
+ FontFamily->"Optima",
+ FontColor->RGBColor[0.14902, 0.545098, 0.823529]],
+
+Cell[StyleData["Subtitle"],
+ FontFamily->"Optima"],
+
+Cell[StyleData["Subsubtitle"],
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{3.5531667905651913`*^9},
+ FontFamily->"Optima"],
+
+Cell[StyleData["Section"],
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{3.5531667905640497`*^9},
+ FontFamily->"Optima"],
+
+Cell[StyleData["Subsection"],
+ CellGroupingRules->{GroupTogetherGrouping, 10000.},
+ CellChangeTimes->{3.5531667905648108`*^9},
+ FontFamily->"Optima"],
+
+Cell[StyleData["Subsubsection"],
+ FontFamily->"Optima"],
+
+Cell[StyleData["Text"],
+ TextJustification->1,
+ FontFamily->"Optima",
+ FontSize->12]
+}, Open  ]]
+},
+WindowSize->{740, 756},
+WindowMargins->{{Automatic, 64}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"PrivateStylesheetFormatting.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 119, 1, 35, 119, 1, "StyleData", "StyleDefinitions", ""],
+Cell[CellGroupData[{
+Cell[702, 25, 97, 1, 48, "Section"],
+Cell[802, 28, 143, 3, 42, "Text"],
+Cell[948, 33, 359, 6, 57, "Text"],
+Cell[1310, 41, 257, 5, 57, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1604, 51, 108, 1, 48, "Section"],
+Cell[1715, 54, 1765, 36, 462, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3517, 95, 96, 1, 48, "Section"],
+Cell[3616, 98, 49, 1, 35, 31, 0, "StyleData", "All", "Working"],
+Cell[3668, 101, 102, 3, 40, 32, 0, "StyleData", "All", "Printout"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3807, 109, 189, 2, 48, "Section"],
+Cell[3999, 113, 1136, 23, 37, 31, 0, "StyleData", "StandardForm", "All"],
+Cell[5138, 138, 391, 10, 50, 24, 0, "StyleData", "Input", "All"],
+Cell[CellGroupData[{
+Cell[5554, 152, 253, 6, 49, 25, 0, "StyleData", "Output", "All"],
+Cell[5810, 160, 222, 4, 50, 64, 0, "StyleData", "Input", "Printout"],
+Cell[6035, 166, 151, 3, 50, 63, 0, "StyleData", "Output", "Printout"]
+}, Open  ]],
+Cell[6201, 172, 228, 6, 50, 23, 0, "StyleData", "Code", "All"],
+Cell[6432, 180, 279, 6, 53, 29, 0, "StyleData", "PrintUsage", "All"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6748, 191, 183, 2, 48, "Section"],
+Cell[6934, 195, 98, 2, 81, 24, 0, "StyleData", "Title", "All"],
+Cell[7035, 199, 50, 1, 70, 27, 0, "StyleData", "Subtitle", "All"],
+Cell[7088, 202, 150, 3, 70, 30, 0, "StyleData", "Subsubtitle", "All"],
+Cell[7241, 207, 146, 3, 70, 26, 0, "StyleData", "Section", "All"],
+Cell[7390, 212, 149, 3, 70, 29, 0, "StyleData", "Subsection", "All"],
+Cell[7542, 217, 55, 1, 70, 32, 0, "StyleData", "Subsubsection", "All"],
+Cell[7600, 220, 84, 3, 70, 23, 0, "StyleData", "Text", "All"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
