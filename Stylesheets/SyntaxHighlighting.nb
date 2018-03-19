@@ -1,0 +1,1166 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     70715,       1158]
+NotebookOptionsPosition[     63571,       1089]
+NotebookOutlinePosition[     64225,       1112]
+CellTagsIndexPosition[     64182,       1109]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+
+Cell[StyleData["CodeStyle"]],
+
+Cell[StyleData["CommandStyle", StyleDefinitions -> StyleData["CodeStyle"]],ExpressionUUID->"b768e9b6-4bf4-47ef-94bc-b48b324c42ac"],
+
+Cell[StyleData["TypeStyle", StyleDefinitions -> StyleData["CodeStyle"]],ExpressionUUID->"915f386b-d596-4e70-8ddb-0b46bb9876fd"],
+
+Cell[StyleData["FormattingHeadStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],ExpressionUUID->"db15b172-260b-4211-8614-7a615453d9b8"],
+
+Cell[StyleData["ConstantStyle", StyleDefinitions -> StyleData["CodeStyle"]],ExpressionUUID->"53f35e4c-b8e3-4039-be4a-07a3e8e293f2"],
+
+Cell[StyleData["FunctionStyle", StyleDefinitions -> StyleData["CodeStyle"]],ExpressionUUID->"24ec5850-9586-46bd-92a3-76e9355ea3fa"],
+
+Cell[StyleData["StringStyle", StyleDefinitions -> StyleData["CodeStyle"]],
+ ShowAutoStyles->False,
+ ShowSyntaxStyles->False,
+ TranslationOptions->{"Enabled"->False},
+ AutoNumberFormatting->False,
+ FontColor->GrayLevel[0.4],
+ FontColr -> RGBColor[0.2, 0.6, 0.3]],
+
+Cell[StyleData["CommentStyle", StyleDefinitions -> StyleData["StringStyle"]],
+ FontFamily->"Arial",
+ FontColor->Hue[
+  0, 0.8, 0.8],ExpressionUUID->"59a95563-09cd-42a4-ab12-6c11e673dac8"],
+
+Cell[StyleData["UndefinedSymbolStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->Hue[
+  0.666, 0.6, 0.8],ExpressionUUID->"656b001c-4444-4066-a4d9-f4e05460e06f"],
+
+Cell[StyleData["SystemStyle", StyleDefinitions -> StyleData["CodeStyle"]],ExpressionUUID->"2fd70fd3-2906-4619-82dd-a7d4ecd3a55d"],
+
+Cell[StyleData["GlobalStyle", StyleDefinitions -> StyleData["CodeStyle"]],
+ FontFamily->
+  "Mathematica",ExpressionUUID->"8d9d03b9-c9c3-41ad-b766-e812d5d2fa50"],
+
+Cell[StyleData["PrivateStyle", StyleDefinitions -> StyleData["CodeStyle"]],
+ FontColor->GrayLevel[0.5]],
+
+Cell[StyleData["OperatorStyle", StyleDefinitions -> StyleData["CodeStyle"]]],
+
+Cell[StyleData["UnstyledStyle", StyleDefinitions -> StyleData["CodeStyle"]],ExpressionUUID->"825599bc-4375-45e9-945f-a414a0214cfb"],
+
+Cell[StyleData["EmphasizedSyntaxErrorStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[0.8, 0., 0.],
+ Background->RGBColor[1., 0.88, 0.51]],
+
+Cell[StyleData["ExcessArgumentStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["FormattingErrorStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[1., 0.33, 0.33],
+ Background->RGBColor[1., 0.33, 0.33, 0.15]],
+
+Cell[StyleData["GlobalToLocalScopeConflictStyle", StyleDefinitions -> \
+StyleData["CodeStyle"]],
+ FontColor->RGBColor[0.8, 0., 0.]],
+
+Cell[StyleData["GraphicsCompatibilityProblemStyle", StyleDefinitions -> \
+StyleData["CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["LocalScopeConflictStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[0.8, 0., 0.]],
+
+Cell[StyleData["LocalVariableStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->Hue[
+  0.38, 0.51, 0.537],ExpressionUUID->"94789232-6fe4-4bc6-a53b-308cda549f48"],
+
+Cell[StyleData["FunctionLocalVariableStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->Hue[
+  0.54, 0.586, 0.568],ExpressionUUID->"2af0d2ee-dfe1-48a0-83f8-2db771c9d01f"],
+
+Cell[StyleData["PatternVariableStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontSlant->"Italic",
+ FontColor->Hue[
+  0.38, 0.51, 0.537],ExpressionUUID->"f04f08f8-124b-430f-b542-d05d5eff6420"],
+
+Cell[StyleData["MissingArgumentStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["MissingArgumentTemplateStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ ShowAutoStyles->False,
+ ShowSyntaxStyles->False,
+ TranslationOptions->{"Enabled"->False},
+ AutoNumberFormatting->False,
+ FontFamily->"Times",
+ FontWeight->Plain,
+ FontSlant->"Italic",
+ FontColor->GrayLevel[0.6]],
+
+Cell[StyleData["SyntaxErrorStyle", StyleDefinitions -> StyleData["CodeStyle"]],
+ FontColor->RGBColor[0.76, 0.33, 0.8]],
+
+Cell[StyleData["MisspelledWordStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[0.76, 0.33, 0.8]],
+
+Cell[StyleData["NoKernelPresentStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[0., 0., 0.4]],
+
+Cell[StyleData["SymbolShadowingStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["OrderOfEvaluationConflictStyle", StyleDefinitions -> \
+StyleData["CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["UnknownOptionStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["UnwantedAssignmentStyle", StyleDefinitions -> StyleData[
+ "CodeStyle"]],
+ FontColor->RGBColor[1., 0.2, 0.2]],
+
+Cell[StyleData["SyntaxHighlightingTitle", StyleDefinitions -> StyleData[
+ "Title"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"541226e1-10be-440d-98d2-e61f25047077"],
+
+Cell[StyleData["SyntaxHighlightingChapter", StyleDefinitions -> StyleData[
+ "Chapter"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"ab809ab8-19fc-4f8d-bc1a-b79ec06c993a"],
+
+Cell[StyleData["SyntaxHighlightingSubchapter", StyleDefinitions -> StyleData[
+ "Subchapter"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"22447271-dfb3-45e9-9c41-f3c54a333889"],
+
+Cell[StyleData["SyntaxHighlightingSection", StyleDefinitions -> StyleData[
+ "Section"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"9debe94f-648e-467a-8bc9-e97df3c97455"],
+
+Cell[StyleData["SyntaxHighlightingSubsection", StyleDefinitions -> StyleData[
+ "Subsection"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"30f0dafd-1d53-4179-b789-f6ce4fa54860"],
+
+Cell[StyleData["SyntaxHighlightingSubsubsection", StyleDefinitions -> \
+StyleData["Subsubsection"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"d1d44363-f328-449a-99e3-9f1df659136c"],
+
+Cell[StyleData["SyntaxHighlightingSubsubsubsection", StyleDefinitions -> \
+StyleData["Subsubsubsection"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"8b486e1c-ee29-42ea-9cf8-4ad2a67eac45"],
+
+Cell[StyleData["SyntaxHighlightingInput", StyleDefinitions -> StyleData[
+ "Input"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"5baa8c6f-4618-4781-b0aa-48f732ddd7bc"],
+
+Cell[StyleData["SyntaxHighlightingCode", StyleDefinitions -> StyleData["Code"]
+ ],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"e693b1ed-cc98-4d04-b7b7-3f94a242b440"],
+
+Cell[StyleData["SyntaxHighlightingOutput", StyleDefinitions -> StyleData[
+ "Output"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"1d0760b4-6a62-4534-9fba-95767bb0e470"],
+
+Cell[StyleData["SyntaxHighlightingText", StyleDefinitions -> StyleData["Text"]
+ ],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"05a98252-66a6-4960-9dc2-0c6a72c9fb1d"],
+
+Cell[StyleData["SyntaxHighlightingItem", StyleDefinitions -> StyleData["Item"]
+ ],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"f29c0988-81bd-498b-96ff-6488dd27eb6b"],
+
+Cell[StyleData["SyntaxHighlightingItemParagraph", StyleDefinitions -> \
+StyleData["ItemParagraph"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"d4e24c25-cb1c-4168-91c6-c6e03f77fc83"],
+
+Cell[StyleData["SyntaxHighlightingSubitem", StyleDefinitions -> StyleData[
+ "Subitem"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"a1b30ba3-cfb2-4d16-964f-2a6e93783bb6"],
+
+Cell[StyleData["SyntaxHighlightingSubitemParagraph", StyleDefinitions -> \
+StyleData["SubitemParagraph"]],
+ AutoStyleOptions->{"CommentStyle"->"CommentStyle",
+ "EmphasizedSyntaxErrorStyle"->"EmphasizedSyntaxErrorStyle",
+ "ExcessArgumentStyle"->"ExcessArgumentStyle",
+ "FormattingErrorStyle"->"FormattingErrorStyle",
+ "FunctionLocalVariableStyle"->"FunctionLocalVariableStyle",
+ "GlobalToLocalScopeConflictStyle"->"GlobalToLocalScopeConflictStyle",
+ "GraphicsCompatibilityProblemStyle"->"GraphicsCompatibilityProblemStyle",
+ "LocalScopeConflictStyle"->"LocalScopeConflictStyle",
+ "LocalVariableStyle"->"LocalVariableStyle",
+ "MissingArgumentStyle"->"MissingArgumentStyle",
+ "MissingArgumentTemplateStyle"->"MissingArgumentTemplateStyle",
+ "MisspelledWordStyle"->"MisspelledWordStyle",
+ "NoKernelPresentStyle"->"NoKernelPresentStyle",
+ "OrderOfEvaluationConflictStyle"->"OrderOfEvaluationConflictStyle",
+ "PatternVariableStyle"->"PatternVariableStyle",
+ "StringStyle"->"StringStyle",
+ "SymbolContextStyles"->{
+  "System`" -> "SystemStyle", "Global`" -> "GlobalStyle", Automatic -> 
+   "UndefinedStyle"},
+ "SymbolShadowingStyle"->"SymbolShadowingStyle",
+ "SyntaxErrorStyle"->"SyntaxErrorStyle",
+ "UndefinedSymbolStyle"->"UndefinedSymbolStyle",
+ "UnknownOptionStyle"->"UnknownOptionStyle",
+ "UnwantedAssignmentStyle"->"UnwantedAssignmentStyle"},
+ AutoStyleWords->{
+  "@" -> "OperatorStyle", "//" -> "OperatorStyle", "~" -> "OperatorStyle", 
+   ";" -> "OperatorStyle", "," -> "OperatorStyle", "-" -> "OperatorStyle", 
+   "+" -> "OperatorStyle", "/" -> "OperatorStyle", "*" -> "OperatorStyle", 
+   "(" -> "OperatorStyle", ")" -> "OperatorStyle", "[" -> "OperatorStyle", 
+   "]" -> "OperatorStyle", "{" -> "OperatorStyle", "}" -> "OperatorStyle", 
+   "[[" -> "OperatorStyle", "]]" -> "OperatorStyle", "<" -> "OperatorStyle", 
+   ">" -> "OperatorStyle", ":" -> "OperatorStyle", "::" -> "OperatorStyle", 
+   "." -> "OperatorStyle", ".." -> "OperatorStyle", "..." -> "OperatorStyle", 
+   "_" -> "OperatorStyle", "__" -> "OperatorStyle", "___" -> "OperatorStyle", 
+   "?" -> "OperatorStyle", "&" -> "OperatorStyle", "&&" -> "OperatorStyle", 
+   "~~" -> "OperatorStyle", "\[RuleDelayed]" -> "OperatorStyle", "->" -> 
+   "OperatorStyle", ":>" -> "OperatorStyle", "|" -> "OperatorStyle", ":=" -> 
+   "OperatorStyle", "^:=" -> "OperatorStyle", "/:" -> "OperatorStyle", "/;" -> 
+   "OperatorStyle", "\"" -> "StringStyle", "Return" -> "CommandStyle", 
+   "Break" -> "CommandStyle", "DialogReturn" -> "CommandStyle", "Goto" -> 
+   "CommandStyle", "Throw" -> "CommandStyle", "Catch" -> "CommandStyle", 
+   "Message" -> "CommandStyle", "Print" -> "CommandStyle", "Assert" -> 
+   "CommandStyle", "Begin" -> "CommandStyle", "BeginPackage" -> 
+   "CommandStyle", "End" -> "CommandStyle", "EndPackage" -> "CommandStyle", 
+   "With" -> "FunctionStyle", "Module" -> "FunctionStyle", "Block" -> 
+   "FunctionStyle", "If" -> "FunctionStyle", "Switch" -> "FunctionStyle", 
+   "Which" -> "FunctionStyle", "Do" -> "FunctionStyle", "Table" -> 
+   "FunctionStyle", "For" -> "FunctionStyle", "While" -> "FunctionStyle", 
+   "Replace" -> "FunctionStyle", "ReplaceAll" -> "FunctionStyle", 
+   "ReplaceRepeated" -> "FunctionStyle", "ReplacePart" -> "FunctionStyle", 
+   "Map" -> "FunctionStyle", "MapIndexed" -> "FunctionStyle", "MapThread" -> 
+   "FunctionStyle", "Entity" -> "TypeStyle", "Quantity" -> "TypeStyle", 
+   "ChannelObject" -> "TypeStyle", "CloudObject" -> "TypeStyle", 
+   "CloudExpression" -> "TypeStyle", "CellObject" -> "TypeStyle", "Notebook" -> 
+   "TypeStyle", "Cell" -> "TypeStyle", "ResourceObject" -> "TypeStyle", 
+   "LocalObject" -> "TypeStyle", "FormObject" -> "TypeStyle", "$Failed" -> 
+   "ConstantStyle", "False" -> "ConstantStyle", "True" -> "ConstantStyle", 
+   "$Canceled" -> "ConstantStyle", "All" -> 
+   "ConstantStyle"},ExpressionUUID->"17e513a2-ca31-408e-a648-2bfb1c01c4a0"],
+
+Cell[BoxData[
+ RowBox[{"SyntaxHiglightingApplyStyling", "[", 
+  RowBox[{"StyleSheetCells", "[", 
+   RowBox[{"\"\<SyntaxHighlighting\>\"", "~~", "___"}], "]"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.727890091912572*^9, 3.727890093953969*^9}, {
+  3.727892334205614*^9, 
+  3.7278923379389*^9}},ExpressionUUID->"2ba4db8b-76cd-4c49-b535-ddeb688695cf"]
+},
+WindowSize->{808, 755},
+WindowMargins->{{33, Automatic}, {Automatic, 16}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "StylesheetFormatting.nb"]], 
+   Cell[
+    StyleData["Notebook"], Editable -> True, Saveable -> True]}, Visible -> 
+  False, FrontEndVersion -> 
+  "11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 10, 2017)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 49, 0, 36, 49, 0, "StyleData", "StyleDefinitions", "",ExpressionUUID->"1f16729c-456f-4cb4-976d-ff0fd2dd214e"],
+Cell[610, 22, 28, 0, 36, 28, 0, "StyleData", "CodeStyle", "All",ExpressionUUID->"0dc881d1-0ace-4568-abc5-109570e1d247"],
+Cell[641, 24, 130, 0, 36, 75, 0, "StyleData", "CommandStyle", "All",ExpressionUUID->"b768e9b6-4bf4-47ef-94bc-b48b324c42ac"],
+Cell[774, 26, 127, 0, 36, 72, 0, "StyleData", "TypeStyle", "All",ExpressionUUID->"915f386b-d596-4e70-8ddb-0b46bb9876fd"],
+Cell[904, 28, 139, 1, 36, 84, 1, "StyleData", "FormattingHeadStyle", "All",ExpressionUUID->"db15b172-260b-4211-8614-7a615453d9b8"],
+Cell[1046, 31, 131, 0, 36, 76, 0, "StyleData", "ConstantStyle", "All",ExpressionUUID->"53f35e4c-b8e3-4039-be4a-07a3e8e293f2"],
+Cell[1180, 33, 131, 0, 36, 76, 0, "StyleData", "FunctionStyle", "All",ExpressionUUID->"24ec5850-9586-46bd-92a3-76e9355ea3fa"],
+Cell[1314, 35, 261, 6, 36, 74, 0, "StyleData", "StringStyle", "All",ExpressionUUID->"ec5bb158-64c5-4e55-aecd-ddb223977f79"],
+Cell[1578, 43, 187, 3, 38, 77, 0, "StyleData", "CommentStyle", "All",ExpressionUUID->"59a95563-09cd-42a4-ab12-6c11e673dac8"],
+Cell[1768, 48, 177, 3, 36, 85, 1, "StyleData", "UndefinedSymbolStyle", "All",ExpressionUUID->"656b001c-4444-4066-a4d9-f4e05460e06f"],
+Cell[1948, 53, 129, 0, 36, 74, 0, "StyleData", "SystemStyle", "All",ExpressionUUID->"2fd70fd3-2906-4619-82dd-a7d4ecd3a55d"],
+Cell[2080, 55, 160, 2, 35, 74, 0, "StyleData", "GlobalStyle", "All",ExpressionUUID->"8d9d03b9-c9c3-41ad-b766-e812d5d2fa50"],
+Cell[2243, 59, 103, 1, 36, 75, 0, "StyleData", "PrivateStyle", "All",ExpressionUUID->"6929e41a-4f6b-4b64-820e-e4d16c8e78a0"],
+Cell[2349, 62, 76, 0, 36, 76, 0, "StyleData", "OperatorStyle", "All",ExpressionUUID->"fe0112c2-694d-4bff-8c55-1c114b4b8727"],
+Cell[2428, 64, 131, 0, 36, 76, 0, "StyleData", "UnstyledStyle", "All",ExpressionUUID->"825599bc-4375-45e9-945f-a414a0214cfb"],
+Cell[2562, 66, 165, 3, 52, 91, 1, "StyleData", "EmphasizedSyntaxErrorStyle", "All",ExpressionUUID->"02b17d7b-85f4-4138-bdb1-1070dfdc3d07"],
+Cell[2730, 71, 120, 2, 36, 84, 1, "StyleData", "ExcessArgumentStyle", "All",ExpressionUUID->"f55f93ff-8701-4a5d-a3a9-376828e00854"],
+Cell[2853, 75, 168, 3, 52, 85, 1, "StyleData", "FormattingErrorStyle", "All",ExpressionUUID->"3277e8f6-7fa7-4c5d-970e-5978e052e9c3"],
+Cell[3024, 80, 131, 2, 36, 96, 1, "StyleData", "GlobalToLocalScopeConflictStyle", "All",ExpressionUUID->"d112c6d5-656d-4a87-8087-ae81d1564f66"],
+Cell[3158, 84, 134, 2, 36, 98, 1, "StyleData", "GraphicsCompatibilityProblemStyle", "All",ExpressionUUID->"21e41260-8654-4e13-ba15-667766b9ae5b"],
+Cell[3295, 88, 123, 2, 36, 88, 1, "StyleData", "LocalScopeConflictStyle", "All",ExpressionUUID->"7ab0ca1b-5451-410d-8f50-92ce1b2e21e1"],
+Cell[3421, 92, 177, 3, 36, 83, 1, "StyleData", "LocalVariableStyle", "All",ExpressionUUID->"94789232-6fe4-4bc6-a53b-308cda549f48"],
+Cell[3601, 97, 186, 3, 36, 91, 1, "StyleData", "FunctionLocalVariableStyle", "All",ExpressionUUID->"2af0d2ee-dfe1-48a0-83f8-2db771c9d01f"],
+Cell[3790, 102, 201, 4, 36, 85, 1, "StyleData", "PatternVariableStyle", "All",ExpressionUUID->"f04f08f8-124b-430f-b542-d05d5eff6420"],
+Cell[3994, 108, 121, 2, 36, 85, 1, "StyleData", "MissingArgumentStyle", "All",ExpressionUUID->"2fec4423-90a6-4515-b556-f1f4d4a23842"],
+Cell[4118, 112, 306, 9, 36, 93, 1, "StyleData", "MissingArgumentTemplateStyle", "All",ExpressionUUID->"986dc9b3-c9e3-4c96-a291-ec9509d1e268"],
+Cell[4427, 123, 118, 1, 36, 79, 0, "StyleData", "SyntaxErrorStyle", "All",ExpressionUUID->"693d1fe1-e5a9-4f0c-aa59-5c0b45cede2b"],
+Cell[4548, 126, 123, 2, 36, 84, 1, "StyleData", "MisspelledWordStyle", "All",ExpressionUUID->"ffc0de7c-0e58-4056-b271-7c42d5689ea8"],
+Cell[4674, 130, 120, 2, 36, 85, 1, "StyleData", "NoKernelPresentStyle", "All",ExpressionUUID->"5de7dc98-7185-489d-b57c-b7b27df5dfa8"],
+Cell[4797, 134, 121, 2, 36, 85, 1, "StyleData", "SymbolShadowingStyle", "All",ExpressionUUID->"556941d9-22a5-496f-b471-93eaf95eb02f"],
+Cell[4921, 138, 131, 2, 36, 95, 1, "StyleData", "OrderOfEvaluationConflictStyle", "All",ExpressionUUID->"4fea69ca-94d6-4397-92a6-2214e504d3dc"],
+Cell[5055, 142, 119, 2, 36, 83, 1, "StyleData", "UnknownOptionStyle", "All",ExpressionUUID->"b15d8f79-a5f7-49df-acdb-c001ebb0a76b"],
+Cell[5177, 146, 124, 2, 36, 88, 1, "StyleData", "UnwantedAssignmentStyle", "All",ExpressionUUID->"49d1b7b8-839b-4547-b97e-9d55b63022e3"],
+Cell[5304, 150, 3851, 60, 113, 84, 1, "StyleData", "SyntaxHighlightingTitle", "All",ExpressionUUID->"541226e1-10be-440d-98d2-e61f25047077"],
+Cell[9158, 212, 3855, 60, 84, 88, 1, "StyleData", "SyntaxHighlightingChapter", "All",ExpressionUUID->"ab809ab8-19fc-4f8d-bc1a-b79ec06c993a"],
+Cell[13016, 274, 3861, 60, 63, 94, 1, "StyleData", "SyntaxHighlightingSubchapter", "All",ExpressionUUID->"22447271-dfb3-45e9-9c41-f3c54a333889"],
+Cell[16880, 336, 3855, 60, 68, 88, 1, "StyleData", "SyntaxHighlightingSection", "All",ExpressionUUID->"9debe94f-648e-467a-8bc9-e97df3c97455"],
+Cell[20738, 398, 3861, 60, 53, 94, 1, "StyleData", "SyntaxHighlightingSubsection", "All",ExpressionUUID->"30f0dafd-1d53-4179-b789-f6ce4fa54860"],
+Cell[24602, 460, 3867, 60, 52, 100, 1, "StyleData", "SyntaxHighlightingSubsubsection", "All",ExpressionUUID->"d1d44363-f328-449a-99e3-9f1df659136c"],
+Cell[28472, 522, 3873, 60, 41, 106, 1, "StyleData", "SyntaxHighlightingSubsubsubsection", "All",ExpressionUUID->"8b486e1c-ee29-42ea-9cf8-4ad2a67eac45"],
+Cell[32348, 584, 3851, 60, 38, 84, 1, "StyleData", "SyntaxHighlightingInput", "All",ExpressionUUID->"5baa8c6f-4618-4781-b0aa-48f732ddd7bc"],
+Cell[36202, 646, 3849, 60, 64, 82, 1, "StyleData", "SyntaxHighlightingCode", "All",ExpressionUUID->"e693b1ed-cc98-4d04-b7b7-3f94a242b440"],
+Cell[40054, 708, 3853, 60, 46, 86, 1, "StyleData", "SyntaxHighlightingOutput", "All",ExpressionUUID->"1d0760b4-6a62-4534-9fba-95767bb0e470"],
+Cell[43910, 770, 3849, 60, 50, 82, 1, "StyleData", "SyntaxHighlightingText", "All",ExpressionUUID->"05a98252-66a6-4960-9dc2-0c6a72c9fb1d"],
+Cell[47762, 832, 3849, 60, 47, 82, 1, "StyleData", "SyntaxHighlightingItem", "All",ExpressionUUID->"f29c0988-81bd-498b-96ff-6488dd27eb6b"],
+Cell[51614, 894, 3867, 60, 40, 100, 1, "StyleData", "SyntaxHighlightingItemParagraph", "All",ExpressionUUID->"d4e24c25-cb1c-4168-91c6-c6e03f77fc83"],
+Cell[55484, 956, 3855, 60, 42, 88, 1, "StyleData", "SyntaxHighlightingSubitem", "All",ExpressionUUID->"a1b30ba3-cfb2-4d16-964f-2a6e93783bb6"],
+Cell[59342, 1018, 3873, 60, 39, 106, 1, "StyleData", "SyntaxHighlightingSubitemParagraph", "All",ExpressionUUID->"17e513a2-ca31-408e-a648-2bfb1c01c4a0"],
+Cell[63218, 1080, 349, 7, 30, "Input",ExpressionUUID->"2ba4db8b-76cd-4c49-b535-ddeb688695cf"]
+}
+]
+*)
+
